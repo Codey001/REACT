@@ -8,7 +8,19 @@ function App() {
 
   function incrementCount(){
     if(countVal == 20) return;
-    setCountVal(countVal + 1);
+
+    setCountVal((prevCount) => prevCount+1)
+    setCountVal((prevCount) => prevCount+1)
+    setCountVal((prevCount) => prevCount+1)
+
+
+    //---ALL THE BELOW UPDATE ONE TIME STATE : because Fibre send updates in batches and all the lines are updating the same thing
+    // setCountVal(countVal + 1);
+    // setCountVal(countVal + 1);
+    // setCountVal(countVal + 1);
+    // setCountVal(countVal + 1);
+    // setCountVal(countVal + 1);
+
   }
 
   function decrementCount(){
